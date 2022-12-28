@@ -1,5 +1,5 @@
-const staticCacheName = 'site-static-v2';
-const dynamicCacheName = 'site-dynamic-v2';
+const staticCacheName = 'site-static-v4';
+const dynamicCacheName = 'site-dynamic-v4';
 const assets = [
   '/',
   '/index.html',
@@ -66,7 +66,7 @@ self.addEventListener('fetch', evt => {
       }).catch(() => {
         if(evt.request.url.indexOf('.html') > -1){
           return caches.match('/pages/fallback.html');
-        }
+        } 
       })
     );
   }
